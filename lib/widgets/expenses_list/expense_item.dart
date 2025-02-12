@@ -13,13 +13,19 @@ class ExpenseItem extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         child: Column(
           children: [
-            Text(expense.title),
+            Text(
+              expense.title,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
             SizedBox(
               height: 4,
             ),
             Row(
               children: [
-                Text('\$${expense.amount.toStringAsFixed(2)}'),
+                Text(
+                  '\$${expense.amount.toStringAsFixed(2)}',
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
                 Spacer(),
                 Row(
                   children: [
@@ -31,6 +37,7 @@ class ExpenseItem extends StatelessWidget {
                     ),
                     Text(
                       expense.formatedDate,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ],
                 ),
